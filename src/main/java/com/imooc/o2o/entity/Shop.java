@@ -8,6 +8,7 @@ public class Shop {
     private Long shopId;
 
     private Long ownerId;
+
     private Long shopCategoryId;
     //店铺名称
     private String shopName;
@@ -39,6 +40,7 @@ public class Shop {
     private ShopCategory shopCategory;
     /** 店铺由谁创建的 */
     private PersionInfo owner;
+
     private ShopCategory parentCategory;
 
     public Long getShopId() {
