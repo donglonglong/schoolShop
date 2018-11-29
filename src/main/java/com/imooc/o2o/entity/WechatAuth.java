@@ -13,7 +13,7 @@ public class WechatAuth {
     //创建时间
     private Date createTime;
     //跟用户表关联，创建用户类
-    private PersionInfo persionInfo;
+    private PersonInfo persionInfo;
 
     public Long getWechatAuthId() {
         return wechatAuthId;
@@ -39,11 +39,11 @@ public class WechatAuth {
         this.createTime = createTime;
     }
 
-    public PersionInfo getPersionInfo() {
+    public PersonInfo getPersionInfo() {
         return persionInfo;
     }
 
-    public void setPersionInfo(PersionInfo persionInfo) {
+    public void setPersionInfo(PersonInfo persionInfo) {
         this.persionInfo = persionInfo;
     }
 

@@ -39,7 +39,7 @@ public class Shop {
     /** 店铺属于哪一个类别 */
     private ShopCategory shopCategory;
     /** 店铺由谁创建的 */
-    private PersionInfo owner;
+    private PersonInfo owner;
 
     private ShopCategory parentCategory;
 
@@ -179,11 +179,11 @@ public class Shop {
         this.shopCategory = shopCategory;
     }
 
-    public PersionInfo getOwner() {
+    public PersonInfo getOwner() {
         return owner;
     }
 
-    public void setOwner(PersionInfo owner) {
+    public void setOwner(PersonInfo owner) {
         this.owner = owner;
     }
 
@@ -193,5 +193,30 @@ public class Shop {
 
     public void setParentCategory(ShopCategory parentCategory) {
         this.parentCategory = parentCategory;
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "shopId=" + shopId +
+                ", ownerId=" + ownerId +
+                ", shopCategoryId=" + shopCategoryId +
+                ", shopName='" + shopName + '\'' +
+                ", shopDesc='" + shopDesc + '\'' +
+                ", shopAddr='" + shopAddr + '\'' +
+                ", phone='" + phone + '\'' +
+                ", shopImg='" + shopImg + '\'' +
+                ", longitude=" + longitude +
+                ", latitude=" + latitude +
+                ", priority=" + priority +
+                ", createTime=" + createTime +
+                ", lastEditTime=" + lastEditTime +
+                ", enableStatus=" + enableStatus +
+                ", advice='" + advice + '\'' +
+                ", area=" + area +
+                ", shopCategory=" + shopCategory +
+                ", owner=" + owner +
+                ", parentCategory=" + parentCategory +
+                '}';
     }
 }

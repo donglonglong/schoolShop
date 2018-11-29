@@ -2,7 +2,7 @@ package com.imooc.o2o.dao;
 
 import com.imooc.o2o.BaseTest;
 import com.imooc.o2o.entity.Area;
-import com.imooc.o2o.entity.PersionInfo;
+import com.imooc.o2o.entity.PersonInfo;
 import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.entity.ShopCategory;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class ShopDaoTest extends BaseTest {
     @Test
     public void testinsertShop(){
         Shop shop = new Shop();
-        PersionInfo owner = new PersionInfo();
+        PersonInfo owner = new PersonInfo();
         Area area = new Area();
         ShopCategory shopCategory = new ShopCategory();
         owner.setUserId(8L);
@@ -42,5 +42,15 @@ public class ShopDaoTest extends BaseTest {
         System.out.println(shop);
         int effectedNum = shopDao.insertShop(shop);
         assertEquals(1,effectedNum);
+    }
+
+    @Test
+    public void testUpdateShop(){
+        Shop shop = new Shop();
+        shop.setShopDesc("商铺信息介绍demo1");
+        shop.setAdvice("商品信息地址demo1");
+        shop.setShopId(30L);
+        int updatenum = shopDao.updateShop(shop);
+        assertEquals(1,updatenum );
     }
 }

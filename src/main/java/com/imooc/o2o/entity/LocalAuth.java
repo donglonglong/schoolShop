@@ -16,7 +16,7 @@ public class LocalAuth {
 
     private Date lastEditTime;
 
-    private PersionInfo persionInfo;
+    private PersonInfo persionInfo;
 
     public Long getLocalAuthId() {
         return localAuthId;
@@ -58,11 +58,11 @@ public class LocalAuth {
         this.lastEditTime = lastEditTime;
     }
 
-    public PersionInfo getPersionInfo() {
+    public PersonInfo getPersionInfo() {
         return persionInfo;
     }
 
-    public void setPersionInfo(PersionInfo persionInfo) {
+    public void setPersionInfo(PersonInfo persionInfo) {
         this.persionInfo = persionInfo;
     }
 
@@ -77,6 +77,4 @@ public class LocalAuth {
                 ", persionInfo=" + persionInfo +
                 '}';
     }
-
-
 }
