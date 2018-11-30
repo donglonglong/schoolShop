@@ -65,8 +65,8 @@ public class ShopServiceImpl implements ShopService {
      */
     private void addShopImg(Shop shop, CommonsMultipartFile shopImg) {
         //获取shop图片目录的相对值路径
-        String dest = FileUtil.getShopImagePath(shop.getShopId());
-        String shopImgAddr = ImageUtil.generateThumbnail(shopImg, dest);
-        shop.setShopImg(shopImgAddr);
+//        String dest = FileUtil.getShopImagePath(shop.getShopId());
+//        String shopImgAddr = ImageUtil.generateThumbnail(shopImg, dest);
+//        shop.setShopImg(shopImgAddr);
     }
 }

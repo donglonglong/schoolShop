@@ -6,24 +6,18 @@ import java.util.Date;
 import java.util.Random;
 
 public class FileUtil {
-	//获取文件的分隔符
 	private static String seperator = System.getProperty("file.separator");
 	private static final SimpleDateFormat sDateFormat = new SimpleDateFormat(
 			"yyyyMMddHHmmss"); // 时间格式化的格式
 	private static final Random r = new Random();
 
-	/**
-	 * 返回项目图片的根路径
-	 * @return
-	 */
 	public static String getImgBasePath() {
-		//根据不同的操作系统选择不同的操作路径
 		String os = System.getProperty("os.name");
 		String basePath = "";
 		if (os.toLowerCase().startsWith("win")) {
-			basePath = "D:/JavaTest/o2o/src/main/webapp/resources/images";
+			basePath = "D:/JavaTest/o2o/src/main/webapp/resources/images/";
 		} else {
-			basePath = "/home/longzepro/image/";
+			basePath = "/home/xiangzepro/";
 		}
 		basePath = basePath.replace("/", seperator);
 		return basePath;
@@ -40,18 +34,13 @@ public class FileUtil {
 		shopCategoryImagePath = shopCategoryImagePath.replace("/", seperator);
 		return shopCategoryImagePath;
 	}
-	
+
 	public static String getPersonInfoImagePath() {
 		String personInfoImagePath = "/upload/images/item/personinfo/";
 		personInfoImagePath = personInfoImagePath.replace("/", seperator);
 		return personInfoImagePath;
 	}
 
-	/**
-	 * 获取店铺图片存储路径
-	 * @param shopId  根据shopId区别图片路径
-	 * @return
-	 */
 	public static String getShopImagePath(long shopId) {
 		StringBuilder shopImagePathBuilder = new StringBuilder();
 		shopImagePathBuilder.append("/upload/images/item/shop/");

@@ -11,6 +11,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import java.io.File;
 import java.util.Date;
 
 public class ShopServiceTest extends BaseTest {
@@ -37,6 +38,8 @@ public class ShopServiceTest extends BaseTest {
         shop.setCreateTime(new Date());
         shop.setEnableStatus(ShopStateEnum.CHECK.getState());
         shop.setAdvice("审核中");
+//        CommonsMultipartFile shopImg = new CommonsMultipartFile("D:/JavaTest/o2o/src/main/webapp/resources/images/xiaohuangren.jpg");
+//        shopService.addShop(shop,shopImg );
 
     }
 }
